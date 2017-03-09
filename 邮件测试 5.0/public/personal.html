@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+    <meta charset="UTF-8">
+    <title>个人信息</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- Bootstrap 3.3.6 -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
+    <link rel="stylesheet" href="plugins/layui/css/layui.css"  media="all">
+    <!-- AdminLTE Skins. Choose a skin from the css/skins
+       folder instead of downloading all of them to reduce the load. -->
+    <link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
+    <style>
+        .layui-form-radioed i,.form-group i:hover{
+            color:#3c8Dbc;
+        }
+        .form-group img{
+            max-height: 245px;
+        }
+        input[type='file']{
+            display: none;
+        }
+    </style>
+</head>
+<body class="hold-transition skin-purple sidebar-mini">
+    <div class="wrapper">
+               
+        <!-- Content Wrapper. Contains page content -->
+        <!--。。。。。。。。。。。。。。个人信息主体。。。。。。。。。。。。。-->
+        <div class="content-wrapper" style="margin-left: 0;">
+           <!-- 页面头部 -->
+            <section class="content-header">
+                <a id="historyBack" href="#">
+                <i class="fa fa-chevron-left"></i>
+                <i class="fa fa-chevron-left"></i>
+                </a>
+              <h1 style="display: inline-block">个人信息</h1>
+              <ol class="breadcrumb">
+                <li><a href="chengzhi.html"><i class="fa fa-dashboard"></i> 主页</a></li>
+                <li class="active">个人信息修改</li>
+              </ol>
+            </section>
+             <!-- 页面主体 -->
+            <section class="content">
+                <!-- Default box -->
+              <div class="box"></div>
+              <div class="box box-info">
+                <form class="form-horizontal layui-form" enctype="multipart/form-data">
+                  <div class="box-body">
+                      <!--用户名-->
+                      <div class="form-group">
+                        <label for="inputUsername" class="col-sm-1 control-label">用户名</label>
+                        <div class="col-sm-10">
+                            <input type="input" class="form-control" id="inputUsername" name="user" readonly>
+                        </div>
+                    </div>
+                    <!--邮箱账号-->
+                    <div class="form-group">
+                        <label for="inputUseremail" class="col-sm-1 control-label">用户邮箱</label>
+                        <div class="col-sm-10">
+                            <input type="input" class="form-control" id="inputUseremail" name="useremail" readonly>
+                        </div>
+                    </div>
+                    <!--密码-->
+                    <div class="form-group">
+                        <label for="inputUserPassword" class="col-sm-1 control-label">新密码</label>
+                        <div class="col-sm-10">
+                            <input type="password" class="form-control" id="inputUserPassword" name="password" placeholder="请输入新密码" required>
+                        </div>
+                    </div>
+                    <!--确认密码-->
+                    <div class="form-group">
+                        <label for="inputUserRePassword" class="col-sm-1 control-label">确认密码</label>
+                        <div class="col-sm-10">
+                            <input type="password" class="form-control" id="inputUserRePassword" name="confirm" placeholder="请确认新密码" required>
+                        </div>
+                    </div>
+                    <!--年龄-->
+                      <div class="form-group">
+                        <label for="inputUserAge" class="col-sm-1 control-label">年龄</label>
+                        <div class="col-sm-10">
+                            <input type="input" class="form-control" id="inputUserAge" name="age" placeholder="年龄">
+                        </div>
+                    </div>
+                    <!--性别-->
+                    <div class="form-group layui-form-item" pane="">
+                        <label for="inputUserAge" class="col-sm-1 control-label">性别</label>
+                        <div class="col-sm-10">
+                            <input id="man" name="sex" value="男" title="男" checked type="radio">
+                            <input id="woman" name="sex" value="女" title="女" type="radio">
+                        </div>                      
+                    </div>
+                    <!--头像-->
+                    <div class="form-group">
+                        <label for="inputUserAddress" class="col-sm-1 control-label">上传头像</label>
+                        <div class="col-sm-10">
+                            <img id="form_touxiang" src="img/add.png" alt="图片已损坏" onerror="this.src='dist/img/user2-160x160.jpg'">
+                            <input type="file" name="inputUserImg" accept=".jpg,.png">
+                        </div>
+                    </div>
+                    <!--地址-->
+                    <div class="form-group">
+                        <label for="inputUserAddress" class="col-sm-1 control-label">地址</label>
+                        <div class="col-sm-10">
+                            <input type="input" class="form-control" id="inputUserAddress" name="address" placeholder="请输入地址">
+                        </div>
+                    </div>
+                    <!--手机号-->
+                    <div class="form-group">
+                        <label for="inputUserPhone" class="col-sm-1 control-label">手机号</label>
+                        <div class="col-sm-10">
+                            <input type="input" class="form-control" id="inputUserPhone" name="phone" placeholder="请输入手机号">
+                        </div>
+                    </div>
+                    <!--备用邮箱-->
+                    <div class="form-group">
+                        <label for="inputUserPrepare" class="col-sm-1 control-label">备用邮箱</label>
+                        <div class="col-sm-10">
+                            <input type="email" class="form-control" id="inputUserPrepare" name="prepare" placeholder="请输入备用邮箱">
+                        </div>
+                    </div>
+                    <!--备注-->
+                    <div class="form-group">
+                        <label for="inputUserBeizhu" class="col-sm-1 control-label">备注</label>
+                        <div class="col-sm-10">
+                            <input type="input" class="form-control" id="inputUserBeizhu" name="beiZhu" placeholder="备注">
+                        </div>
+                    </div>
+                    <!--提交-->
+                    <div class="form-group">
+                      <div class="col-sm-12">
+                        <button class="btn btn-primary btn-block btn-lg"   type="submit">确认</button>
+                      </div>
+                    </div>
+
+                  </div>
+                  <!--表单结束-->
+                </form>
+              </div>
+            </section>
+        </div>
+
+            <!--模态框-->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="zhuangTai">成功</h4>
+      </div>
+      <div class="modal-body">
+        <p id="xingXi">个人信息已修改</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">确定</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+            <!-- jQuery 2.2.3 -->
+    <script src="plugins/jQuery/jquery-2.2.3.min.js"></script>
+    <script src="plugins/jQuery/jquery.cookie.js"></script>
+    <!-- Bootstrap 3.3.6 -->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="dist/js/app.min.js"></script> 
+    <script src="plugins/layui/layui.js" charset="utf-8"></script>
+    <!--js文件-->
+    <script src="personal.js"></script>
+</body>
+</html>

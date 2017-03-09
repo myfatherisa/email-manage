@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <title>注册</title>
+  
+  <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet"  type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+  <link rel="stylesheet" type="text/css" href="dist/css/AdminLTE.min.css">
+  <link rel="stylesheet" type="text/css" href="dist/css/skins/_all-skins.min.css">
+
+  
+</head>
+<body class="hold-transition register-page">
+<div class="register-box">
+  <div class="register-logo">
+    <b>Email-register</b>
+  </div>
+
+  <div class="register-box-body">
+    <p class="login-box-msg">Please register a new email</p>
+
+    <form action="/register" method="post" name="myForm" ng-app="myApp" ng-controller="myController">
+      <div class="form-group has-feedback">
+        <input type="text" name="user" ng-model="user" class="form-control" placeholder="用户名" required>
+      </div>
+      <div class="form-group has-feedback">
+        <input type="password" id="password" name="password" ng-model="password" class="form-control" placeholder="密码" required>
+      </div>
+      <div class="form-group has-feedback">
+        <input type="password" id="confirm" name="confirm" ng-model="confirm" class="form-control" placeholder="再次输入密码" required>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <button type="submit" class="btn btn-primary btn-block btn-flat" ng-disabled="myForm.user.$pristine && myForm.user.$invalid || myForm.password.$pristine && myForm.password.$invalid || myForm.confirm.$pristine && myForm.confirm.$invalid">注册</button>
+          <br>
+          <button id="login" class="btn btn-success btn-block btn-flat">已有账号？去登录</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+ 
+<!-- 模态框 -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="zhuangTai">系统提示</h4>
+      </div>
+      <div class="modal-body">
+        <p id="xingXi">成功</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">确定</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<script src="plugins/jQuery/jquery-2.2.3.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<script src="dist/js/app.min.js"></script>
+<script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+
+<script src="index.js"></script>
+</body>
+</html>

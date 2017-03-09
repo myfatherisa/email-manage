@@ -1,0 +1,1 @@
+{"user":"admin","useremail":"admin@youxiang.com","password":"a","confirm":"a","age":"23","sex":"女","address":"那美克星","phone":"12345678901","prepare":"1043130381@qq.com","beiZhu":"哈哈哈哈"}

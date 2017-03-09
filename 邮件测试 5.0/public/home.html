@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <title>Home页</title>
+  
+  <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+  <link rel="stylesheet" type="text/css" href="dist/css/AdminLTE.min.css">
+  <link rel="stylesheet" type="text/css" href="dist/css/skins/_all-skins.min.css">
+
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+<div class="wrapper">
+<!--顶部导航区域-->
+  <header class="main-header">
+          <!-- Logo -->
+          <a href="#" class="logo">
+            <!-- mini logo for sidebar mini 50x50 pixels -->
+            <!--<span class="logo-mini"><b>A</b>LT</span>-->
+            <span class="logo-mini">邮箱</span>
+            <!-- logo for regular state and mobile devices -->
+            <!--<span class="logo-lg"><b>Admin</b>LTE</span>-->
+            <span class="logo-lg">邮箱邮箱</span>
+          </a>
+          <!-- Header Navbar: style can be found in header.less -->
+          <nav class="navbar navbar-static-top">
+              <!-- Sidebar toggle button-->
+              <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+                <!--<span class="sr-only">Toggle navigation</span>-->
+              </a>
+            <div class="navbar-custom-menu">
+              <ul class="nav navbar-nav">
+                <!-- Messages: style can be found in dropdown.less-->
+
+                <!-- Notifications: style can be found in dropdown.less -->
+
+                <!-- Tasks: style can be found in dropdown.less -->
+
+                <!-- User Account: style can be found in dropdown.less -->
+                <li class="dropdown user user-menu">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    <!--<img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image">-->
+                    <img src="" class="user-image" alt="User Image" onerror="this.src='dist/img/user2-160x160.jpg'">
+                    <span class="hidden-xs" id="username_top">用户名</span>
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li class="user-header">
+                      <img src="" class="img-circle" alt="" onerror="this.src='dist/img/user2-160x160.jpg'">
+                      <p id="username_hide">写点介绍</p>
+                    </li>
+                    <li class="user-body">
+                      <div class="row">
+                        <div class="col-xs-12 text-center">
+                          <a href="#">所有人都很懒，什么也没有写</a>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="user-footer">
+                      <div class="pull-left">
+                        <a href="personal.html" target="fivehunder" class="btn btn-default btn-flat">
+                          个人信息
+                        </a>
+                      </div>
+                      <div id="exit" class="pull-right">
+                        <a href="#" class="btn btn-default btn-flat">
+                          退出
+                        </a>
+                      </div>
+                    </li>
+                  </ul>
+                </li>
+                <!-- Control Sidebar Toggle Button -->
+              </ul>
+            </div>
+          </nav>
+        </header>
+
+<!--左侧菜单栏-->
+  <aside class="main-sidebar">
+          <!-- sidebar: style can be found in sidebar.less -->
+          <section class="sidebar">
+            <!-- Sidebar user panel -->
+            <div class="user-panel">
+              <div class="pull-left image">
+                <img src="" class="img-circle" alt="User Image" onerror="this.src='dist/img/user2-160x160.jpg'">
+              </div>
+              <div class="pull-left info">
+                <p id="username_side">用户名</p>
+              </div>
+            </div>
+            <ul class="sidebar-menu">
+              <li id="shouYe" class="treeview active">
+                <a href="chengzhi.html" target="fivehunder">
+                  <i class="fa fa-file-sound-o"></i>
+                  <span>首页</span>
+                  <span class="pull-right-container">
+                    <span class="label label-primary pull-right"></span>
+                  </span>
+                </a>
+              </li>
+          <!--。。。。。。。。。。。。。。。。-写信侧边栏。。。。。。。。。。。-->
+              <li class="treeview">
+                <a href="write.html" target="fivehunder">
+                  <i class="fa fa-pencil-square-o"></i>
+                  <span>写邮件</span>
+                </a>
+              </li>
+          <!--。。。。。。。。。。。。。。。。。写信侧边栏结束。。。。。。。。-->
+          <!--。。。。。。。。。。。。。。。。-发件箱侧边栏。。。。。。。。。。。-->
+              <li class="treeview">
+                <a href="send.html" target="fivehunder">
+                  <i class="fa fa-sign-out"></i>
+                  <span>已发邮件</span>
+                </a>
+              </li>
+          <!--。。。。。。。。。。。。。。。。。发件箱侧边栏结束。。。。。。。。-->
+          <!--。。。。。。。。。。。。。。。。-删除侧边栏。。。。。。。。。。。-->
+              <li class="treeview">
+                <a href="del.html" target="fivehunder">
+                  <i class="fa fa-trash-o"></i>
+                  <span>回收站</span>
+                </a>
+              </li>
+          <!--。。。。。。。。。。。。。。。。。删除侧边栏结束。。。。。。。。-->
+            </ul>
+          </section>
+          <!-- /.sidebar -->
+        </aside>
+
+<!--右侧内容栏-->
+  <div class="content-wrapper">
+    <iframe src="chengzhi.html" frameborder="0" name="fivehunder" style="min-height: 1126px;width: 100%;" onload="loadFrame(this)">
+    <!-- 主内容顶部 -->
+    <section class="container container-header">
+      <div class="row">
+         <div class="col-md-12">
+            <h1><b>Welcome to email</b></h1>
+         </div>
+      </div>
+    </section>
+
+    <!-- 主内容正文 -->
+    <section class="container">
+       <div class="row">
+          <div class="col-md-12">
+            <div class="row-header">
+               <h3><b>Hellow，Orange</b></h3>
+               <button class="btn btn-primary" type="button">
+                  欢迎使用
+                  <span class="badge">4</span>
+               </button>
+               <button class="btn btn-primary" type="button">
+                  邮件系统
+                  <span class="badge">4</span>
+               </button>
+            </div>
+            <div class="main">
+              <h4>邮箱推荐</h4>
+              <img id="image" src="img/bg6.jpg" alt="bg">
+              <div class="list-group">
+                <ul class="list-group">
+                  <li class="list-group-item list-group-item-success">Pessimistic people have ceased to live,Optimistic people never dies</li>
+                  <li class="list-group-item list-group-item-info">At the age of the most can bear don't chose at ease</li>
+                  <li class="list-group-item list-group-item-warning">The future you will thank now hard themselves</li>
+                  <li class="list-group-item list-group-item-danger">Please look at my beautiful insists</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+       </div>
+    </section>
+</iframe>
+  </div>
+
+  <!-- 底部 -->
+  <footer class="main-footer">
+    <div class="pull-right hidden-xs">
+      <b>Version</b> 2.3.8
+    </div>
+    <strong>Copyright &copy; 2014-2016 <a href="http://almsaeedstudio.com">Almsaeed Studio</a>.</strong> All rights
+    reserved.
+  </footer>
+  
+<script src="plugins/jQuery/jquery-2.2.3.min.js"></script>
+<script src="plugins/jQuery/jquery.cookie.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<!--<script src="js/jquery.slimscroll.min.js"></script>
+<script src="js/fastclick/fastclick.js"></script>-->
+<script src="dist/js/app.min.js"></script>
+
+<script src="home.js"></script>
+
+</body>
+</html>

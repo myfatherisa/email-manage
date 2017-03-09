@@ -1,0 +1,1 @@
+{"user":"1","useremail":"1@youxiang.com","password":"111","confirm":"111","age":"25","sex":"男","address":"澳大利亚","phone":"45678912346","prepare":"1231234561@qq.com","beiZhu":"啦啦啦啦"}
